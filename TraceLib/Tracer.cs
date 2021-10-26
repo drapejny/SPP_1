@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace TraceLib
 {
-    class Tracer : ITracer
+  public class Tracer : ITracer
     {
         private readonly TraceResult _traceResult;
 
