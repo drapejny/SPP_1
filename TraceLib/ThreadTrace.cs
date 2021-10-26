@@ -13,6 +13,8 @@ namespace TraceLib
         public long Time { get; set; }
         public List<Method> Methods { get;} = new List<Method>();
 
+        public ThreadTrace() { }
+
         public ThreadTrace(int id)
         {
             Id = id;

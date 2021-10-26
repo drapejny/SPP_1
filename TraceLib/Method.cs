@@ -17,6 +17,7 @@ namespace TraceLib
         public string ClassName { get; set; }
         public List<Method> InnerMethods { get; set; }
 
+        public Method() { }
         public Method(string name, string className, string methodPath)
         {
             Name = name;
