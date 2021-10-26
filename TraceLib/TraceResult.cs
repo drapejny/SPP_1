@@ -11,6 +11,10 @@ namespace TraceLib
         {
         }
 
+        public ConcurrentDictionary<int, ThreadTrace> GetThreadTraces()
+        {
+            return ThreadTraces;
+        }
         public ThreadTrace FindThreadTrace(int id)
         {
             return ThreadTraces.GetOrAdd(id, new ThreadTrace(id));
