@@ -1,1 +1,39 @@
-﻿
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfThreadTrace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ThreadTrace>
+    <Id>1</Id>
+    <Time>223</Time>
+    <Methods>
+      <Method>
+        <Name>MyMethod</Name>
+        <Time>112</Time>
+        <ClassName>Foo</ClassName>
+        <InnerMethods>
+          <Method>
+            <Name>InnerMethod</Name>
+            <Time>111</Time>
+            <ClassName>Bar</ClassName>
+          </Method>
+        </InnerMethods>
+      </Method>
+    </Methods>
+  </ThreadTrace>
+  <ThreadTrace>
+    <Id>4</Id>
+    <Time>335</Time>
+    <Methods>
+      <Method>
+        <Name>Method1</Name>
+        <Time>221</Time>
+        <ClassName>Program</ClassName>
+        <InnerMethods>
+          <Method>
+            <Name>Method2</Name>
+            <Time>114</Time>
+            <ClassName>Program</ClassName>
+          </Method>
+        </InnerMethods>
+      </Method>
+    </Methods>
+  </ThreadTrace>
+</ArrayOfThreadTrace>

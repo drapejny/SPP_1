@@ -2,16 +2,16 @@
   "threads": [
     {
       "Id": 1,
-      "Time": 218,
+      "Time": 223,
       "Methods": [
         {
           "Name": "MyMethod",
-          "Time": 109,
+          "Time": 112,
           "ClassName": "Foo",
           "InnerMethods": [
             {
               "Name": "InnerMethod",
-              "Time": 109,
+              "Time": 111,
               "ClassName": "Bar",
               "InnerMethods": null
             }
@@ -21,13 +21,20 @@
     },
     {
       "Id": 4,
-      "Time": 103,
+      "Time": 335,
       "Methods": [
         {
-          "Name": "Method",
-          "Time": 103,
+          "Name": "Method1",
+          "Time": 221,
           "ClassName": "Program",
-          "InnerMethods": null
+          "InnerMethods": [
+            {
+              "Name": "Method2",
+              "Time": 114,
+              "ClassName": "Program",
+              "InnerMethods": null
+            }
+          ]
         }
       ]
     }
