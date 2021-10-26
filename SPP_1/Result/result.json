@@ -1,0 +1,35 @@
+{
+  "threads": [
+    {
+      "Id": 1,
+      "Time": 218,
+      "Methods": [
+        {
+          "Name": "MyMethod",
+          "Time": 109,
+          "ClassName": "Foo",
+          "InnerMethods": [
+            {
+              "Name": "InnerMethod",
+              "Time": 109,
+              "ClassName": "Bar",
+              "InnerMethods": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Time": 103,
+      "Methods": [
+        {
+          "Name": "Method",
+          "Time": 103,
+          "ClassName": "Program",
+          "InnerMethods": null
+        }
+      ]
+    }
+  ]
+}
