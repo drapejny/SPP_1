@@ -16,6 +16,7 @@ namespace TraceTest
         [TestCase(250)]
         [TestCase(350)]
         [TestCase(450)]
+        [TestCase(1000)]
         public void MethodEllapsedTimeTest(int sleepTime)
         {
             _tracer = new Tracer();
@@ -25,7 +26,7 @@ namespace TraceTest
             int threadId = Thread.CurrentThread.ManagedThreadId;
             Method method = _tracer.GetTraceResult().GetThreadTraces()[threadId].Methods[0].InnerMethods[0];
             long time = method.GetElapsedTime();
-            Assert.AreEqual(sleepTime - 50 <= time && time <= sleepTime + 50, true, $"Expected elapsed time in ({sleepTime - 50}; {sleepTime + 50})");
+            Assert.AreEqual(sleepTime <= time && time <= sleepTime + 50, true, $"Expected elapsed time in ({sleepTime - 50}; {sleepTime + 50})");
         }
 
         [TestCase(0)]
@@ -34,6 +35,7 @@ namespace TraceTest
         [TestCase(250)]
         [TestCase(350)]
         [TestCase(450)]
+        [TestCase(1000)]
         public void InnerMethodEllapsedTimeTest(int sleepTime)
         {
             _tracer = new Tracer();
@@ -43,7 +45,7 @@ namespace TraceTest
             int threadId = Thread.CurrentThread.ManagedThreadId;
             Method innerMethod = _tracer.GetTraceResult().GetThreadTraces()[threadId].Methods[0].InnerMethods[0].InnerMethods[0];
             long time = innerMethod.GetElapsedTime();
-            Assert.AreEqual(sleepTime - 50 <= time && time <= sleepTime + 50, true, $"Expected elapsed time in ({sleepTime - 50}; {sleepTime + 50})");
+            Assert.AreEqual(sleepTime <= time && time <= sleepTime + 50, true, $"Expected elapsed time in ({sleepTime - 50}; {sleepTime + 50})");
         }
 
         private void Method(int sleepTime)

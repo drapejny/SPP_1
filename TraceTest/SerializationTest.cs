@@ -47,13 +47,6 @@ namespace TraceTest
             Assert.AreEqual(expectedLinesCount, actualLInesCount);
         }
 
-
-
-
-
-
-
-
         private void Method()
         {
             _tracer.StartTrace();
