@@ -13,7 +13,6 @@ namespace TraceLib.Serialization
             var data = traceResult.GetThreadTraces().Values.ToArray();
             var xmlSerializer = new System.Xml.Serialization.XmlSerializer(data.GetType());
             var stringWriter = new StringWriter();
-            //using(var xmlTextWriter = new System.Xml.Xml)
             xmlSerializer.Serialize(stringWriter, data);
             return stringWriter.ToString();
         }

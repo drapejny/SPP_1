@@ -13,6 +13,15 @@ namespace TraceLib
 
         public ConcurrentDictionary<int, ThreadTrace> GetThreadTraces()
         {
+            foreach(ThreadTrace threadTrace in ThreadTraces.Values)
+            {
+                long time = 0;
+                foreach(Method method in threadTrace.Methods)
+                {
+                    time += method.Time;
+                }
+                threadTrace.Time = time;
+            }
             return ThreadTraces;
         }
         public ThreadTrace FindThreadTrace(int id)

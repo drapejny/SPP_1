@@ -28,7 +28,6 @@ namespace TraceLib
         public void RemoveMethod(string methodPath)
         {
             int removeIndex = Methods.FindLastIndex(method => String.Equals(method.GetMethodPath(), methodPath));
-
             if(removeIndex != Methods.Count - 1)
             {
                 int length = Methods.Count - 1 - removeIndex;
