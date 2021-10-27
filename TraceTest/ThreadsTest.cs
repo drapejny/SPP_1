@@ -37,7 +37,5 @@ namespace TraceTest
             Thread.Sleep(10);
             _tracer.StopTrace();
         }
-
-
     }
 }
